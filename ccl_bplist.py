@@ -383,7 +383,7 @@ def deserialise_NsKeyedArchiver(obj, parse_whole_structure=False):
     # Check that this is an archiver and version we understand
     if not isinstance(obj, dict):
         raise TypeError("obj must be a dict")
-    if "$archiver" not in obj or obj["$archiver"] != "NSKeyedArchiver":
+    if "$archiver" not in obj or obj["$archiver"] != "GLKeyedArchiver":
         raise ValueError("obj does not contain an '$archiver' key or the '$archiver' is unrecognised")
     if "$version" not in obj or obj["$version"] != 100000:
         raise ValueError("obj does not contain a '$version' key or the '$version' is unrecognised")
